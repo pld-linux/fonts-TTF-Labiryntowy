@@ -1,15 +1,13 @@
 Summary:	Labyrinth alphabet font
 Summary(pl.UTF-8):	Font alfabetu labiryntowego
 Name:		fonts-TTF-Labiryntowy
-Version:	1.52
+Version:	1.5
 Release:	1
 License:	freeware
 Group:		Fonts
-Source0:	https://github.com/texrg/Labiryntowy/raw/master/Labiryntowy_pl.ttf
-# Source0-md5:	88c4e403cb75603a8fb2cf8ad8bc21fd
-Source1:	https://github.com/texrg/Labiryntowy/blob/master/opis.pdf
-# Source1-md5:
-URL:		https://github.com/texrg/Labiryntowy
+Source0:	https://github.com/texrg/Labiryntowy/archive/1.5.tar.gz
+# Source0-md5:	b99609f88d8fe8e192e261d258523f43
+URL:		http://alfabetozdobny.appspot.com/?str=labiryntowy
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/TTF
 Requires:	fontconfig >= 1:2.10.1
@@ -30,7 +28,7 @@ labiryntowego. Font ten zawiera ponad 300 ligatur i większość znaków
 potrzebnych do wykonania tytułów, imion i monogramów.
 
 %prep
-%setup -q -c -T
+%setup -q -n Labiryntowy-%{version}
 
 %build
 
@@ -39,8 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_ttffontsdir}
 
-cp -p %{SOURCE0} $RPM_BUILD_ROOT%{_ttffontsdir}
-cp -p %{SOURCE1} .
+cp -p *.ttf $RPM_BUILD_ROOT%{_ttffontsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
