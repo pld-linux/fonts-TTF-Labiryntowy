@@ -5,7 +5,7 @@ Version:	1.5
 Release:	1
 License:	freeware
 Group:		Fonts
-Source0:	https://github.com/texrg/Labiryntowy/archive/1.5.tar.gz
+Source0:	https://github.com/texrg/Labiryntowy/archive/%{version}.tar.gz
 # Source0-md5:	b99609f88d8fe8e192e261d258523f43
 URL:		http://alfabetozdobny.appspot.com/?str=labiryntowy
 Requires(post,postun):	fontpostinst
